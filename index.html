@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report of Teaching Practice – ณัฐภาส เงินห้อย</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-logo">📚</div>
+    <div class="header-title">
+      Report of Teaching Practice
+      <span>นายณัฐภาส เงินห้อย · TCT34</span>
+    </div>
+    <button class="hamburger" id="hbBtn"><span></span><span></span><span></span></button>
+  </header>
+
+  <nav class="site-nav" id="siteNav">
+    <div class="nav-inner">
+      <div class="nav-item"><a onclick="go('home')">🏠 หน้าแรก</a></div>
+      <div class="nav-item"><a onclick="go('school')">🏫 สถานศึกษา</a></div>
+      <div class="nav-item" id="n-tt">
+        <a onclick="dropTap('n-tt')">📅 ตารางสอน <span class="ch">▼</span></a>
+        <div class="dropdown">
+          <a onclick="goSem('timetable',1)">ภาคเรียนที่ 1</a>
+          <a onclick="goSem('timetable',2)">ภาคเรียนที่ 2</a>
+        </div>
+      </div>
+      <div class="nav-item" id="n-pl">
+        <a onclick="dropTap('n-pl')">📝 แผนการสอน <span class="ch">▼</span></a>
+        <div class="dropdown">
+          <a onclick="goSem('plan',1)">ภาคเรียนที่ 1</a>
+          <a onclick="goSem('plan',2)">ภาคเรียนที่ 2</a>
+        </div>
+      </div>
+      <div class="nav-item" id="n-di">
+        <a onclick="dropTap('n-di')">📖 บันทึกการสอน <span class="ch">▼</span></a>
+        <div class="dropdown">
+          <a onclick="goSem('diary',1)">ภาคเรียนที่ 1</a>
+          <a onclick="goSem('diary',2)">ภาคเรียนที่ 2</a>
+        </div>
+      </div>
+      <div class="nav-item" id="n-ac">
+        <a onclick="dropTap('n-ac')">🎯 กิจกรรม <span class="ch">▼</span></a>
+        <div class="dropdown">
+          <a onclick="goSem('activity',1)">ภาคเรียนที่ 1</a>
+          <a onclick="goSem('activity',2)">ภาคเรียนที่ 2</a>
+        </div>
+      </div>
+      <div class="nav-item"><a onclick="go('research')">🔬 วิจัยในชั้นเรียน</a></div>
+      <div class="nav-item"><a onclick="go('evaluate')">📊 แบบประเมิน</a></div>
+    </div>
+  </nav>
+
+  <main class="page">
+
+    <section class="section active" id="sec-home">
+
+      <div class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-red-bar"></div>
+        <div class="hero-inner">
+          <div class="hero-text">
+            <div class="hero-label">KMUTNB · Computer Education</div>
+            <div class="hero-title-en">REPORT OF<br>TEACHING<br>PRACTICE</div>
+            <div class="hero-title-th">รายงานการปฏิบัติการสอน</div>
+            <div class="hero-chips">
+              <div class="chip">👤 นายณัฐภาส เงินห้อย</div>
+              <div class="chip">🎓 TCT34</div>
+              <div class="chip">🏫 วทค.ลพบุรี</div>
+              <div class="chip">📅 2569–2570</div>
+            </div>
+          </div>
+          <div class="hero-photo">
+            <img src="images/รูปชุดนศ.png" alt="ณัฐภาส เงินห้อย" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <div class="card" onclick="go('school')">
+          <div class="card-icon">🏫</div>
+          <h3>สถานศึกษา</h3>
+          <p>วิทยาลัยเทคนิคลพบุรี · เทคโนโลยีคอมพิวเตอร์</p>
+        </div>
+        <div class="card" onclick="goSem('timetable',1)">
+          <div class="card-icon">📅</div>
+          <h3>ตารางสอน</h3>
+          <p>ตารางสอนรายสัปดาห์ ภาคเรียนที่ 1 และ 2</p>
+        </div>
+        <div class="card" onclick="goSem('plan',1)">
+          <div class="card-icon">📝</div>
+          <h3>แผนการสอน</h3>
+          <p>แผนการจัดการเรียนรู้ ภาคเรียนที่ 1 และ 2</p>
+        </div>
+        <div class="card" onclick="goSem('diary',1)">
+          <div class="card-icon">📖</div>
+          <h3>บันทึกการสอน</h3>
+          <p>บันทึกหลังการสอนแต่ละสัปดาห์</p>
+        </div>
+        <div class="card" onclick="goSem('activity',1)">
+          <div class="card-icon">🎯</div>
+          <h3>กิจกรรม</h3>
+          <p>กิจกรรมในและนอกหลักสูตร</p>
+        </div>
+        <div class="card" onclick="go('research')">
+          <div class="card-icon">🔬</div>
+          <h3>วิจัยในชั้นเรียน</h3>
+          <p>งานวิจัยเพื่อพัฒนาการเรียนการสอน</p>
+        </div>
+        <div class="card" onclick="go('evaluate')">
+          <div class="card-icon">📊</div>
+          <h3>แบบประเมิน</h3>
+          <p>แบบประเมินสมรรถนะวิชาชีพครู</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sec-school">
+      <div class="bc"><a onclick="go('home')">หน้าแรก</a><span class="sep">›</span><span>สถานศึกษา</span></div>
+      <div class="sec-header">
+        <div class="ico">🏫</div>
+        <h2>สถานศึกษา</h2>
+      </div>
+
+      <div class="school-hero">
+        <img src="images/school_info.png" alt="สถานที่ฝึกปฏิบัติการสอน" />
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-header">ข้อมูลสถานศึกษา</div>
+        <div class="info-card-body">
+          <div class="info-row">
+            <span class="lbl">ชื่อสถานศึกษา</span><span class="val">วิทยาลัยเทคนิคลพบุรี</span>
+            <span class="lbl">แผนกวิชา</span><span class="val">เทคโนโลยีคอมพิวเตอร์</span>
+            <span class="lbl">ระยะเวลา</span><span class="val">5 พฤษภาคม 2569 – 15 มีนาคม 2570</span>
+            <span class="lbl">วันเวลาปฏิบัติงาน</span><span class="val">จันทร์ – ศุกร์ เวลา 07.30 – 16.15 น.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-grid">
+        <div class="profile-card">
+          <div class="profile-card-header">👨‍🏫 ครูพี่เลี้ยง</div>
+          <div class="profile-card-body">
+            <div class="profile-photo">
+              <img src="images/ครูพี่เลี้ยง.png" alt="ครูพี่เลี้ยง" />
+            </div>
+            <div class="profile-info">
+              <div class="profile-name">นายรณภูมิ นาคสมบูรณ์</div>
+              <div class="profile-detail">
+                หัวหน้าแผนก<br>
+                แผนกวิชาเทคโนโลยีคอมพิวเตอร์<br>
+                ครูประจำ แผนกวิชาเทคโนโลยีคอมพิวเตอร์
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-card-header">🎓 นักศึกษาฝึกสอน</div>
+          <div class="profile-card-body">
+            <div class="profile-photo">
+              <img src="images/รูปชุดนศ.png" alt="นักศึกษา" />
+            </div>
+            <div class="profile-info">
+              <div class="profile-name">นายณัฐภาส เงินห้อย</div>
+              <div class="profile-detail">
+                นักศึกษาระดับปริญญาตรี (TCT)<br>
+                ภาควิชาคอมพิวเตอร์ศึกษา<br>
+                คณะครุศาสตร์อุตสาหกรรม<br>
+                มจพ. (KMUTNB)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subject-card">
+        <img src="images/subject.png" alt="รายวิชา" />
+      </div>
+    </section>
+
+    <section class="section" id="sec-timetable">
+      <div class="bc"><a onclick="go('home')">หน้าแรก</a><span class="sep">›</span><span>ตารางสอน</span></div>
+      <div class="sec-header">
+        <div class="ico">📅</div>
+        <h2>ตารางสอน (ภาคเรียนที่ 1/2569)</h2>
+      </div>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="semTab('timetable',1,this)">ภาคเรียนที่ 1</button>
+        <button class="tab-btn active" onclick="semTab('timetable',2,this)">ภาคเรียนที่ 2</button>
+      </div>
+      <div class="sem-content active" id="timetable-1">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>คาบ / เวลา</th>
+                <th>จันทร์</th>
+                <th>อังคาร</th>
+                <th>พุธ</th>
+                <th>พฤหัสบดี</th>
+                <th>ศุกร์</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1 · 08:00–09:00</td>
+                <td>31909-1004<br><small>2สทค1-2</small></td>
+                <td>21909-1007<br><small>2ชทค1</small></td>
+                <td>21909-1007<br><small>2ชทค2</small></td>
+                <td>31905-2016<br><small>2สคอ1</small></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>2 · 09:00–10:00</td>
+                <td>31909-1004<br><small>2สทค1-2</small></td>
+                <td>21909-1007<br><small>2ชทค1</small></td>
+                <td>21909-1007<br><small>2ชทค2</small></td>
+                <td>31905-2016<br><small>2สคอ1</small></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>3 · 10:00–11:00</td>
+                <td>31909-1004<br><small>2สทค1-2</small></td>
+                <td>21909-1007<br><small>2ชทค1</small></td>
+                <td>21909-1007<br><small>2ชทค2</small></td>
+                <td>31905-2016<br><small>2สคอ1</small></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>4 · 11:00–12:00</td>
+                <td>31909-1004<br><small>2สทค1-2</small></td>
+                <td>21909-1007<br><small>2ชทค1</small></td>
+                <td>21909-1007<br><small>2ชทค2</small></td>
+                <td>31905-2016<br><small>2สคอ1</small></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>5 · 12:00–13:00</td>
+                <td colspan="5" style="background:#fff3cd;">พักกลางวัน</td>
+              </tr>
+              <tr>
+                <td>6 · 13:00–14:00</td>
+                <td>—</td>
+                <td>—</td>
+                <td>31909-0002<br><small>1สทค2</small></td>
+                <td rowspan="3" style="background:#fce4e1;">กิจกรรม</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>7 · 14:00–15:00</td>
+                <td>—</td>
+                <td>—</td>
+                <td>31909-0002<br><small>1สทค2</small></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>8 · 15:00–16:00</td>
+                <td>—</td>
+                <td>—</td>
+                <td>31909-0002<br><small>1สทค2</small></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>9 · 16:00–17:00</td>
+                <td>—</td>
+                <td>—</td>
+                <td>31909-0002<br><small>1สทค2</small></td>
+                <td>31905-2016<br><small>2สคอ1</small></td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-card">
+          <div class="info-card-header">📚 รายวิชาที่ฝึกสอน</div>
+          <div class="info-card-body">
+            <div class="info-row">
+              <span class="lbl">รหัสวิชา</span><span class="val">21909-1007</span>
+              <span class="lbl">ชื่อวิชา</span><span class="val">การใช้งานระบบปฏิบัติการ</span>
+              <span class="lbl">รหัสวิชา</span><span class="val">31909-1002</span>
+              <span class="lbl">ชื่อวิชา</span><span class="val">พื้นฐานงานไฟฟ้าและอิเล็กทรอนิกส์อัจฉริยะ</span>
+              <span class="lbl">รหัสวิชา</span><span class="val">31905-2016</span>
+              <span class="lbl">ชื่อวิชา </span><span class="val">การตัดต่อภาพวิดีทัศน์ดิจิทัลและวิชวลเอฟเฟค</span>
+              <span class="lbl">รหัสวิชา</span><span class="val">31909-1004</span>
+              <span class="lbl">ชื่อวิชา</span><span class="val">การซ่อมบำรุงเครื่องคอมพิวเตอร์และอุปกรณ์ต่อพ่วง</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sem-content" id="timetable-2">
+        <p>อยู่ระหว่างรอข้อมูลตารางเรียนภาคเรียนที่ 2</p>
+      </div>
+    </section>
+
+    <section class="section" id="sec-plan">
+      <div class="bc"><a onclick="go('home')">หน้าแรก</a><span class="sep">›</span><span>แผนการสอน</span></div>
+      <div class="sec-header">
+        <div class="ico">📝</div>
+        <h2>แผนการสอน</h2>
+      </div>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="semTab('plan',1,this)">ภาคเรียนที่ 1</button>
+        <button class="tab-btn" onclick="semTab('plan',2,this)">ภาคเรียนที่ 2</button>
+      </div>
+      <div class="sem-content active" id="plan-1">
+        <div class="doc-list">
+          <a class="doc-item" href="#" target="_blank">
+            <div class="doc-ico">📄</div>
+            <div>
+              <div class="doc-title">แผนการสอน หน่วยที่ 1</div>
+              <div class="doc-sub">PDF · Google Drive</div>
+            </div><span class="doc-arr">›</span>
+          </a>
+          <a class="doc-item" href="#" target="_blank">
+            <div class="doc-ico">📄</div>
+            <div>
+              <div class="doc-title">แผนการสอน หน่วยที่ 2</div>
+              <div class="doc-sub">PDF · Google Drive</div>
+            </div><span class="doc-arr">›</span>
+          </a>
+          <a class="doc-item" href="#" target="_blank">
+            <div class="doc-ico">📄</div>
+            <div>
+              <div class="doc-title">แผนการสอน หน่วยที่ 3</div>
+              <div class="doc-sub">PDF · Google Drive</div>
+            </div><span class="doc-arr">›</span>
+          </a>
+        </div>
+      </div>
+      <div class="sem-content" id="plan-2">
+        <div class="doc-list">
+          <a class="doc-item" href="#" target="_blank">
+            <div class="doc-ico">📄</div>
+            <div>
+              <div class="doc-title">แผนการสอน หน่วยที่ 1</div>
+              <div class="doc-sub">PDF · Google Drive</div>
+            </div><span class="doc-arr">›</span>
+          </a>
+          <a class="doc-item" href="#" target="_blank">
+            <div class="doc-ico">📄</div>
+            <div>
+              <div class="doc-title">แผนการสอน หน่วยที่ 2</div>
+              <div class="doc-sub">PDF · Google Drive</div>
+            </div><span class="doc-arr">›</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sec-diary">
+      <div class="bc"><a onclick="go('home')">หน้าแรก</a><span class="sep">›</span><span>บันทึกการสอน</span></div>
+      <div class="sec-header">
+        <div class="ico">📖</div>
+        <h2>บันทึกการสอน</h2>
+      </div>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="semTab('diary',1,this)">ภาคเรียนที่ 1</button>
+        <button class="tab-btn" onclick="semTab('diary',2,this)">ภาคเรียนที่ 2</button>
+      </div>
+      <div class="sem-content active" id="diary-1">
+        <div class="doc-list">
+          <a class="doc-item" href="#" target="_blank">
+            <div class="doc-ico">📗</div>
+            <div>
+              <div class="doc-title">บันทึกการสอน สัปดาห์ที่ 1</div>
+              <div class="doc-sub">PDF · Google Drive</div>
+            </div><span class="doc-arr">›</span>
+          </a>
+          <a class="doc-item" href="#" target="_blank">
+            <div class="doc-ico">📗</div>
+            <div>
+              <div class="doc-title">บันทึกการสอน สัปดาห์ที่ 2</div>
+              <div class="doc-sub">PDF · Google Drive</div>
+            </div><span class="doc-arr">›</span>
+          </a>
+          <a class="doc-item" href="#" target="_blank">
+            <div class="doc-ico">📗</div>
+            <div>
+              <div class="doc-title">บันทึกการสอน สัปดาห์ที่ 3</div>
+              <div class="doc-sub">PDF · Google Drive</div>
+            </div><span class="doc-arr">›</span>
+          </a>
+        </div>
+      </div>
+      <div class="sem-content" id="diary-2">
+        <div class="doc-list">
+          <a class="doc-item" href="#" target="_blank">
+            <div class="doc-ico">📗</div>
+            <div>
+              <div class="doc-title">บันทึกการสอน สัปดาห์ที่ 1</div>
+              <div class="doc-sub">PDF · Google Drive</div>
+            </div><span class="doc-arr">›</span>
+          </a>
+          <a class="doc-item" href="#" target="_blank">
+            <div class="doc-ico">📗</div>
+            <div>
+              <div class="doc-title">บันทึกการสอน สัปดาห์ที่ 2</div>
+              <div class="doc-sub">PDF · Google Drive</div>
+            </div><span class="doc-arr">›</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sec-activity">
+      <div class="bc"><a onclick="go('home')">หน้าแรก</a><span class="sep">›</span><span>กิจกรรม</span></div>
+      <div class="sec-header">
+        <div class="ico">🎯</div>
+        <h2>กิจกรรม</h2>
+      </div>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="semTab('activity',1,this)">ภาคเรียนที่ 1</button>
+        <button class="tab-btn" onclick="semTab('activity',2,this)">ภาคเรียนที่ 2</button>
+      </div>
+      <div class="sem-content active" id="activity-1">
+        <div class="gallery">
+          <div class="gallery-ph"><span>🖼️</span><span>รูปกิจกรรม 1</span></div>
+          <div class="gallery-ph"><span>🖼️</span><span>รูปกิจกรรม 2</span></div>
+          <div class="gallery-ph"><span>🖼️</span><span>รูปกิจกรรม 3</span></div>
+          <div class="gallery-ph"><span>🖼️</span><span>รูปกิจกรรม 4</span></div>
+        </div>
+        <p class="note">* แทนที่ placeholder ด้วย &lt;img src="..."&gt; จริง หรือฝัง Google Photos album</p>
+      </div>
+      <div class="sem-content" id="activity-2">
+        <div class="gallery">
+          <div class="gallery-ph"><span>🖼️</span><span>รูปกิจกรรม 1</span></div>
+          <div class="gallery-ph"><span>🖼️</span><span>รูปกิจกรรม 2</span></div>
+          <div class="gallery-ph"><span>🖼️</span><span>รูปกิจกรรม 3</span></div>
+        </div>
+        <p class="note">* แทนที่ placeholder ด้วย &lt;img src="..."&gt; จริง หรือฝัง Google Photos album</p>
+      </div>
+    </section>
+
+    <section class="section" id="sec-research">
+      <div class="bc"><a onclick="go('home')">หน้าแรก</a><span class="sep">›</span><span>วิจัยในชั้นเรียน</span></div>
+      <div class="sec-header">
+        <div class="ico">🔬</div>
+        <h2>วิจัยในชั้นเรียน</h2>
+      </div>
+      <div class="info-card">
+        <div class="info-card-header">ข้อมูลงานวิจัย</div>
+        <div class="info-card-body">
+          <div class="info-row">
+            <span class="lbl">ชื่องานวิจัย</span><span class="val">— กรุณากรอกชื่องานวิจัย —</span>
+            <span class="lbl">ปัญหาที่ศึกษา</span><span class="val">— กรุณากรอกปัญหา —</span>
+            <span class="lbl">กลุ่มเป้าหมาย</span><span class="val">— กรุณากรอกกลุ่มเป้าหมาย —</span>
+            <span class="lbl">ระยะเวลา</span><span class="val">— กรุณากรอกระยะเวลา —</span>
+          </div>
+        </div>
+      </div>
+      <div class="doc-list">
+        <a class="doc-item" href="#" target="_blank">
+          <div class="doc-ico">📑</div>
+          <div>
+            <div class="doc-title">รายงานวิจัยในชั้นเรียน (ฉบับสมบูรณ์)</div>
+            <div class="doc-sub">PDF · Google Drive</div>
+          </div>
+          <span class="doc-arr">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="sec-evaluate">
+      <div class="bc"><a onclick="go('home')">หน้าแรก</a><span class="sep">›</span><span>แบบประเมินการฝึกสอน</span>
+      </div>
+      <div class="sec-header">
+        <div class="ico">📊</div>
+        <h2>แบบประเมินการฝึกสอน</h2>
+      </div>
+      <div class="eval-card">
+        <div class="e-ico">📋</div>
+        <div>
+          <h3>แบบประเมินสมรรถนะวิชาชีพครู</h3>
+          <p>แบบประเมินผลการฝึกปฏิบัติการสอนสำหรับนักศึกษาสาขาวิชาคอมพิวเตอร์ศึกษา<br>
+            ภาควิชาคอมพิวเตอร์ศึกษา คณะครุศาสตร์อุตสาหกรรม มจพ.</p>
+          <a class="btn-red" href="#" target="_blank">📝 กรอกแบบประเมิน</a>
+        </div>
+      </div>
+      <div class="doc-list" style="margin-top:20px;">
+        <a class="doc-item" href="#" target="_blank">
+          <div class="doc-ico">📊</div>
+          <div>
+            <div class="doc-title">สรุปผลการประเมินการฝึกสอน</div>
+            <div class="doc-sub">Google Sheets · สรุปผล</div>
+          </div>
+          <span class="doc-arr">›</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    Copyright © 2026 Department of Computer Education (KMUTNB) · นายณัฐภาส เงินห้อย #TCT34
+  </footer>
+
+  <script>
+    const SEC = {
+      home: 'sec-home', school: 'sec-school',
+      timetable: 'sec-timetable', plan: 'sec-plan',
+      diary: 'sec-diary', activity: 'sec-activity',
+      research: 'sec-research', evaluate: 'sec-evaluate'
+    };
+
+    function go(k) {
+      Object.values(SEC).forEach(id => document.getElementById(id).classList.remove('active'));
+      document.getElementById(SEC[k]).classList.add('active');
+      closeMobileNav();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function goSem(sec, n) {
+      go(sec);
+      const btns = document.querySelectorAll(`#${SEC[sec]} .tab-btn`);
+      btns.forEach((b, i) => b.classList.toggle('active', i === n - 1));
+      const cnts = document.querySelectorAll(`#${SEC[sec]} .sem-content`);
+      cnts.forEach((c, i) => c.classList.toggle('active', i === n - 1));
+    }
+
+    function semTab(sec, n, btn) {
+      const btns = document.querySelectorAll(`#${SEC[sec]} .tab-btn`);
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cnts = document.querySelectorAll(`#${SEC[sec]} .sem-content`);
+      cnts.forEach((c, i) => c.classList.toggle('active', i === n - 1));
+    }
+
+    function dropTap(id) {
+      const el = document.getElementById(id);
+      const was = el.classList.contains('open');
+      document.querySelectorAll('.nav-item.open').forEach(n => n.classList.remove('open'));
+      if (!was) el.classList.add('open');
+    }
+
+    function closeMobileNav() {
+      document.getElementById('siteNav').classList.remove('open');
+      document.getElementById('hbBtn').classList.remove('open');
+    }
+
+    document.getElementById('hbBtn').addEventListener('click', () => {
+      document.getElementById('siteNav').classList.toggle('open');
+      document.getElementById('hbBtn').classList.toggle('open');
+    });
+
+    document.addEventListener('click', e => {
+      if (!document.getElementById('siteNav').contains(e.target) &&
+        !document.getElementById('hbBtn').contains(e.target)) {
+        closeMobileNav();
+      }
+    });
+  </script>
+</body>
+
+</html>
